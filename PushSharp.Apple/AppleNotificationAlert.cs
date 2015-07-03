@@ -32,6 +32,15 @@ namespace PushSharp.Apple
 			set;
 		}
 
+        /// <summary>
+        /// Title Text of the Notification's Alert
+        /// </summary>
+        public string Title
+        {
+            get;
+            set;
+        }
+
 		/// <summary>
 		/// Action Button's Localized Key
 		/// </summary>
@@ -63,6 +72,29 @@ namespace PushSharp.Apple
 		{
 			this.LocalizedArgs.AddRange(values);
 		}
+
+        /// <summary>
+        /// Title Localized Key
+        /// </summary>
+        public string TitleLocalizedKey
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Title Localized Argument List
+        /// </summary>
+        public List<object> TitleLocalizedArgs
+        {
+            get;
+            set;
+        }
+
+        public void AddTitleLocalizedArgs(params object[] values)
+        {
+            this.TitleLocalizedArgs.AddRange(values);
+        }
 
         /// <summary>
         /// Filename of the Lauch Image (with ou without extension)
